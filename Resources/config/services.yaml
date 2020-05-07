@@ -1,0 +1,4 @@
+services:
+    GaylordP\AgeBundle\Twig\Extension:
+        tags:
+            - 'twig.extension'
