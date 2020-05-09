@@ -4,8 +4,12 @@ namespace GaylordP\AgeBundle\Util;
 
 class DatetimeToAge
 {
-    public static function get(\DateTime $date, \DateTime $since = null): int
+    public static function get($date, \DateTime $since = null): int
     {
+        if (is_string($date)) {
+            $date = new \DateTime($date);
+        }
+
         if (null === $since) {
             $since = new \DateTime();
         }

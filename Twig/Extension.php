@@ -13,21 +13,8 @@ class Extension extends AbstractExtension
         return [
             new TwigFilter(
                 'age',
-                [$this, 'age']
+                [DatetimeToAge::class, 'get']
             ),
         ];
-    }
-
-    public function age($date, \DateTime $since = null): int
-    {
-        if (is_string($date)) {
-            $date = new \DateTime($date);
-        }
-
-        if (null === $since) {
-            $since = new \DateTime();
-        }
-
-        return DatetimeToAge::get($date, $since);
     }
 }
