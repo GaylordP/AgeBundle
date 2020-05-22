@@ -6,6 +6,11 @@
                 <source>years_old</source>
                 <target>%age% ans</target>
             </trans-unit>
+
+            <trans-unit id="label.age">
+                <source>label.age</source>
+                <target>Âge</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
